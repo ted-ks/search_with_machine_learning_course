@@ -54,6 +54,8 @@ class DataPrepper:
         #input_df = input_df.astype({'click_time': 'datetime64', 'query_time':'datetime64'})
         input_df = self.filter_junk_clicks(input_df, verify_file, output_dir)
         # first we are going to split by date
+        #import math
+        #half = np.datetime64(math.floor(input_df['click_time'].astype('int64').median()), "ns")
         half = input_df['click_time'].median()
         first = input_df[input_df['click_time'] <= half]
         second = input_df[input_df['click_time'] > half]
@@ -68,6 +70,9 @@ class DataPrepper:
             second = second[:min(len(second), test_rows)]
         #train, test = model_selection.train_test_split(input_df, test_size=args.split_test_size)
         #input_df = input_df.sample(frac=1).reset_index(drop=True)  # shuffle things
+
+        print(f"FIRST LENGTH {len(first)}")
+        print(f"SECOND LENGTH {len(second)}")
         first.to_csv("%s/%s" % (output_dir, split_train), index=False)
         second.to_csv("%s/%s" % (output_dir, split_test), index=False)
 
@@ -232,25 +237,47 @@ class DataPrepper:
         log_query = lu.create_feature_log_query(key, query_doc_ids, click_prior_query, self.featureset_name,
                                                 self.ltr_store_name,
                                                 size=len(query_doc_ids), terms_field=terms_field)
+
         # IMPLEMENT_START --
-        print("IMPLEMENT ME: __log_ltr_query_features: Extract log features out of the LTR:EXT response and place in a data frame")
-        # Loop over the hits structure returned by running `log_query` and then extract out the features from the response per query_id and doc id.  Also capture and return all query/doc pairs that didn't return features
-        # Your structure should look like the data frame below
-        feature_results = {}
-        feature_results["doc_id"] = []  # capture the doc id so we can join later
-        feature_results["query_id"] = []  # ^^^
-        feature_results["sku"] = []
-        feature_results["salePrice"] = []
-        feature_results["name_match"] = []
-        rng = np.random.default_rng(12345)
-        for doc_id in query_doc_ids:
-            feature_results["doc_id"].append(doc_id)  # capture the doc id so we can join later
-            feature_results["query_id"].append(query_id)
-            feature_results["sku"].append(doc_id)  # ^^^
-            feature_results["salePrice"].append(rng.random())
-            feature_results["name_match"].append(rng.random())
-        frame = pd.DataFrame(feature_results)
-        return frame.astype({'doc_id': 'int64', 'query_id': 'int64', 'sku': 'int64'})
+        # print("IMPLEMENT ME: __log_ltr_query_features: Extract log features out of the LTR:EXT response and place in a data frame")
+        response = self.opensearch.search(body=log_query, index=self.index_name)
+
+        if response and len(response['hits']) > 0 and len(response['hits']['hits']) > 0:
+            hits = response['hits']['hits']
+            feature_results = {"doc_id": [], "query_id": [], "sku": []}
+            #feature_results["query_id"] = [int(query_id)] * len(hits)
+            #feature_results["salePrice"] = []
+            #feature_results["name_match"] = []
+
+            for hit in hits:
+                features = hit['fields']['_ltrlog'][0]['log_entry']
+                feature_results["doc_id"].append(hit['_id'])
+                feature_results["query_id"].append(query_id)
+                feature_results["sku"].append(hit["_source"]['sku'][0])
+
+                for feature in features:
+                    name = feature["name"]
+                    val = feature.get("value", 0)
+
+                    if name not in feature_results:
+                        feature_results[name] = []
+
+                    feature_results[name].append(val)
+
+            missing_ids = []
+            for qid in query_doc_ids:
+                if str(qid) not in feature_results["doc_id"]:
+                    missing_ids.append(qid)
+
+            frame = pd.DataFrame(feature_results)
+
+            if len(missing_ids) > 0:
+                no_results[key] = missing_ids
+
+            return frame.astype({'doc_id': 'int64', 'query_id': 'int64', 'sku': 'int64'})
+        else:
+            no_results[key] = query_doc_ids
+        return None
         # IMPLEMENT_END
 
     # Can try out normalizing data, but for XGb, you really don't have to since it is just finding splits
