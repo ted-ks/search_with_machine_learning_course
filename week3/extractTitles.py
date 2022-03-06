@@ -7,6 +7,8 @@ from pathlib import Path
 from nltk.corpus import stopwords
 from nltk import word_tokenize
 from nltk.stem import SnowballStemmer
+import re
+
 
 directory = r'/workspace/search_with_machine_learning_course/data/pruned_products'
 parser = argparse.ArgumentParser(description='Process some integers.')
@@ -45,6 +47,7 @@ def transform_training_data(name):
     parts = [p for p in parts if not p.isdigit()]
     parts = [p for p in parts if not is_float(p)]
     parts = [p for p in parts if len(p) > 1 and p != "''"]
+    parts = [re.sub(r'\W+','', p).strip() for p in parts]
     return " ".join(parts)
 
 # Directory for product data

@@ -1,69 +1,68 @@
 Models
 =======
 
-
 Query word? iphone
-iphone® 0.948659
-iphon 0.8953
-phone 0.842915
-4s 0.838116
-otterbox 0.749548
-ipod® 0.72784
-shell 0.727472
-verizon 0.715309
-motorola 0.688042
-htc 0.685149
+otterbox 0.962879
+4s 0.956445
+silicon 0.950566
+iphon 0.941756
+cover 0.908246
+shell 0.905354
+skin 0.885271
+shield 0.880664
+touch 0.871051
+4thgener 0.856681
 
 Query word? ipad
-ipad® 0.935363
-generat 0.873363
-folio 0.775899
-apple® 0.717924
-sleev 0.65471
-tribeca 0.636342
-delux 0.618132
-ipod® 0.610749
-incas 0.609242
-ipod™ 0.598245
+shield 0.965454
+sleev 0.951166
+folio 0.949483
+tribeca 0.945684
+incas 0.939249
+4thgener 0.938017
+4s 0.922388
+silicon 0.903118
+appl 0.894921
+generat 0.88841
 
 
 Query word? easyshare
-easyshar 0.995026
-kodak 0.943218
-10.1mp 0.852965
-10.2mp 0.810642
-olympus 0.779647
-coolpix 0.769837
-cyber-shot 0.769346
-14.1mp 0.766063
-12.2mp 0.740799
-finepix 0.718378
+easyshar 0.992651
+140megapixel 0.959459
+rebel 0.959383
+telephoto 0.955254
+kodak 0.9543
+eo 0.952196
+olympus 0.952163
+camera 0.951128
+101mp 0.950672
+canon 0.948721
 
 
 Query word? satellite
-satellit 0.990823
-vaio 0.746626
-toshiba 0.745307
-display 0.699807
-centrino® 0.699755
-intel® 0.690677
-i3 0.665674
-core™2 0.656033
-pentium® 0.637393
-radio-readi 0.635903
+satellit 0.99699
+ipodsatellit 0.917993
+display 0.88468
+radioreadi 0.877393
+centrino 0.858778
+indash 0.842422
+alpin 0.837924
+50w 0.836564
+vaio 0.834314
+intel 0.827273
 
 
 Query word? rebel
-eo 0.965141
-18.0mp 0.964816
-55-250mm 0.953104
-dslr 0.95102
-75-300mm 0.950531
-70-300mm 0.917145
-55-300mm 0.895564
-slr 0.883365
-55-200mm 0.877028
-telephoto 0.876609
+101mp 0.993286
+180mp 0.991549
+telephoto 0.988267
+eo 0.986568
+140megapixel 0.985823
+slr 0.985772
+70300mm 0.985404
+123mp 0.985079
+dslr 0.984634
+nikon 0.984465
 
 
 
@@ -72,131 +71,132 @@ brands
 ======
 
 Query word? sony
-soni 0.823388
-sound 0.696874
-handycam 0.607428
-solar 0.602878
-acoust 0.590861
-batteri 0.578135
-lenmar 0.56939
-creativ 0.569328
-cyber-shot 0.569009
-toshiba 0.561811
+soni 0.883342
+stick 0.878596
+progressivescan 0.832656
+sonic 0.819705
+playback 0.801004
+init 0.788113
+dvd 0.784486
+remot 0.78313
+memorex 0.768241
+deck 0.764954
 
 
 Query word? apple
-apple® 0.992505
-ipod® 0.808774
-ipad® 0.766134
-generat 0.758977
-iphone® 0.746362
-ipod™ 0.744849
-ipad 0.732527
-incas 0.70574
-4th-gener 0.702223
-nano 0.686795
+appl 0.962622
+ipod 0.91992
+4thgener 0.903539
+incas 0.90048
+griffin 0.885079
+4s 0.879496
+ipad 0.877009
+touch 0.871111
+shield 0.865924
+silicon 0.863534
 
 
 Query word? canon
-rebel 0.842205
-eo 0.831669
-18.0mp 0.820302
-55-250mm 0.797712
-75-300mm 0.784313
-dslr 0.778462
-10.1mp 0.772329
-powershot 0.76116
-70-300mm 0.746007
-14.1mp 0.742504
+kodak 0.968944
+easyshar 0.94766
+olympus 0.932988
+telephoto 0.931081
+rebel 0.926287
+powershot 0.918866
+eo 0.918715
+140megapixel 0.915228
+101mp 0.90804
+camera 0.907716
 
 
 Query word? kodak
-easyshar 0.949087
-10.1mp 0.777481
-olympus 0.738175
-14.1mp 0.730931
-coolpix 0.715734
-10.2mp 0.713547
-cyber-shot 0.701728
-photo 0.700212
-powershot 0.693853
-tripod 0.690733
+canon 0.968944
+easyshar 0.945046
+olympus 0.92854
+140megapixel 0.925187
+telephoto 0.924968
+rebel 0.914321
+powershot 0.905829
+camera 0.904265
+141mp 0.900436
+eo 0.899051
 
 
 Query word? whirlpool
-frigidair 0.903544
-white-on-whit 0.890202
-maytag 0.879537
-bisque-on-bisqu 0.86014
-bisqu 0.852558
-profil 0.826138
-black-on-black 0.822153
-galleri 0.810191
-stainless-steel 0.808087
-ge 0.761079
+maytag 0.991677
+whiteonwhit 0.98671
+frigidair 0.979251
+biscuit 0.976778
+bisqu 0.974275
+bisqueonbisqu 0.969079
+gas 0.967836
+frostfre 0.967721
+profil 0.967166
+galleri 0.96285
 
 
 product types
 ==============
 
 Query word? fridge
-bridgeabl 0.87903
-frost-fre 0.812486
-crossov 0.785278
-top-mount 0.782101
-refriger 0.78188
-rockford 0.772069
-maytag 0.767332
-thru-the-door 0.762321
-profil 0.758908
-side-by-sid 0.750221
+freezer 0.959241
+maytag 0.939733
+frostfre 0.937612
+refriger 0.937198
+whirlpool 0.933054
+bisqu 0.931623
+counterdepth 0.930384
+profil 0.930219
+bisqueonbisqu 0.925608
+frigidair 0.923756
 
 Query word? camera
-extra 0.807464
-10.1mp 0.800001
-12.2mp 0.798734
-nikon 0.790178
-10.2mp 0.786694
-12.3mp 0.779832
-telephoto 0.773701
-14.1mp 0.773374
-16.2mp 0.771524
-14.2mp 0.76721
+140megapixel 0.980222
+nikon 0.978344
+180mp 0.977413
+rebel 0.975641
+123mp 0.975564
+101mp 0.973109
+141mp 0.970401
+dslr 0.970249
+162mp 0.969123
+extra 0.968735
 
 Query word? motherboard
-keyboard 0.818705
-brother 0.693531
-promark 0.690775
-reclin 0.681875
-network-readi 0.673922
-bluetooth 0.668994
-wireless 0.653958
-motorola 0.65223
-mobil 0.650582
-blackberri 0.644117
+targus 0.890043
+folio 0.863045
+shield 0.84751
+slim 0.842704
+keyboard 0.83991
+silicon 0.827378
+ipad 0.823057
+4s 0.822393
+brown 0.82155
+belkin 0.820884
 
-batteri 0.983981
-lithium-ion 0.854596
-lenmar 0.777031
-recharg 0.771717
-cyber-shot 0.713531
-14.1mp 0.702657
-extra 0.694079
-canon 0.678167
-powershot 0.673611
-16.2mp 0.668267
+Query word? battery
+batteri 0.99467
+canon 0.987453
+141mp 0.986954
+cybershot 0.986576
+powershot 0.98537
+121mp 0.983012
+tripod 0.980611
+olympus 0.980151
+nikon 0.97982
+camcord 0.979338
 
-Query word? keyboard
-key 0.748082
-promark 0.643952
-kindl 0.60874
-desk 0.581988
-bluetooth 0.556173
-casio 0.537985
-gator 0.535204
-pangea 0.530568
-brand 0.528862
-shelf 0.518002
+Query word? battery
+batteri 0.992143
+digipow 0.959376
+lithiumion 0.944151
+lenmar 0.918593
+recharg 0.916647
+powershot 0.866839
+easyshar 0.859828
+cybershot 0.858078
+141mp 0.847825
+121mp 0.842535
 
 
 
@@ -205,65 +205,65 @@ attributes
 
 
 Query word? wireless
-wireless-n 0.783054
-router 0.634442
-mous 0.622337
-optic 0.605707
-d-link 0.590187
-linksi 0.588909
-sale 0.586543
-promark 0.584568
-netgear 0.561633
-logitech 0.55488
+wirelessn 0.958206
+dlink 0.877994
+netgear 0.855841
+logitech 0.85321
+router 0.841319
+network 0.838053
+ethernet 0.830438
+switch 0.825461
+4port 0.79362
+tech 0.78556
 
 
 Query word? compact
-compani 0.662607
-ft 0.653778
-compon 0.602973
-compaq 0.562911
-cu 0.501958
-12.3mp 0.496571
-frost-fre 0.491976
-refriger 0.488064
-ft. 0.476481
-freezer 0.470624
+freezer 0.770832
+french 0.767047
+coffeemak 0.753964
+replac 0.753769
+refriger 0.745244
+cu 0.741084
+sidebysid 0.73802
+plus 0.735878
+frostfre 0.735348
+ice 0.733826
 
 
 Query word? black
-black/silv 0.721342
-black/r 0.694105
-black/gray 0.676654
-black-on-black 0.583434
-blue 0.572151
-gray 0.527822
-red 0.522849
-white 0.505295
-pink 0.496472
-blackberri 0.483344
+blackr 0.888411
+blacksilv 0.860303
+blackgray 0.84833
+silverblack 0.742162
+blackberri 0.729329
+blackonblack 0.706601
+glove 0.651007
+brown 0.645702
+seri 0.626058
+</s> 0.619404
 
 
 Query word? clear
-zagg 0.737464
-invisibleshield 0.722537
-clean 0.69354
-protector 0.659537
-4th-gener 0.630917
-ear 0.604829
-htc 0.600946
-griffin 0.600243
-generat 0.599191
-reader 0.587467
+headphon 0.882492
+skullcandi 0.880051
+silicon 0.870143
+sennheis 0.864074
+charger 0.86267
+earbud 0.862237
+protector 0.859871
+iphon 0.854526
+touch 0.848659
+overtheear 0.837869
 
 
 Query word? metal
-schecter 0.632379
-6-string 0.539311
-skullcandi 0.533135
-devil 0.532263
-full-siz 0.531263
-4s 0.521786
-acoustic/electr 0.502169
-hoover 0.495348
-bagless 0.494783
-touch® 0.493032
+macbook 0.704272
+incas 0.698706
+skin 0.680519
+schecter 0.678461
+dark 0.677347
+tom 0.676103
+sleev 0.674671
+tomtom 0.672096
+charcoal 0.670193
+shell 0.662681

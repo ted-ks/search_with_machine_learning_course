@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 from nltk import word_tokenize
 from nltk.stem import SnowballStemmer
 import json
+import re
 
 snowball = SnowballStemmer("english") 
 def is_float(string):
@@ -24,6 +25,7 @@ def transform_name(product_name):
     parts = [p for p in parts if not p.isdigit()]
     parts = [p for p in parts if not is_float(p)]
     parts = [p for p in parts if len(p) > 1 and p != "''"]
+    parts = [re.sub(r'\W+','', p).strip() for p in parts]
     return " ".join(parts)
 
 # Directory for product data
