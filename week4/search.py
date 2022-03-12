@@ -68,8 +68,8 @@ def get_query_category(user_query, query_class_model):
     cats = []
 
     for cat,score in zip(clean_prediction_cat, predictions[1]):
-        if score < min_score:
-            continue
+        # if score < min_score:
+        #     continue
         if total_score > min_score:
             break
         cats.append(cat)
