@@ -1,5 +1,7 @@
 
 Unique Categories 
+==================
+
 
 100 Min query : 871 
 1000 Min Query : 385
@@ -47,6 +49,9 @@ R@1	0.527
 R@3	0.71
 R@5	0.774
 
+
+Task 2
+=======
 
 
 Positive Results
